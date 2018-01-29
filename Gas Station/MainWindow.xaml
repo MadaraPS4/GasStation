@@ -1,0 +1,65 @@
+﻿<Window x:Class="Gas_Station.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gas_Station"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="564.2" Width="564">
+    <Window.Resources>
+        <local:Sum x:Key="TotalSum" Summa="0" />
+    </Window.Resources>
+    <Grid Margin="0,-9,0,9" Background="Beige" Name="ran">
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left"  Margin="173,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="36" Width="231" FontSize="20" Foreground="#FF1CDAB8" FontFamily="Wide Latin"><Run Text="Gas Station"/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left"  Margin="144,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="275" Foreground="#FFEC0E0E" FontSize="14" FontFamily="Ravie"><Run Text="Select the type of gasoline"/><LineBreak/><Run/></TextBlock>
+        <Label x:Name="label" Content="АИ-80" HorizontalAlignment="Left" Margin="157,141,0,0" VerticalAlignment="Top" Foreground="#FF9C60D8"/>
+        <Label x:Name="label_Copy" Content="АИ-92" HorizontalAlignment="Left" Margin="157,202,0,0" VerticalAlignment="Top" Foreground="#FF9C60D8"/>
+        <Label x:Name="label_Copy1" Content="Дизель" HorizontalAlignment="Left" Margin="157,259,0,0" VerticalAlignment="Top" Foreground="#FF9C60D8"/>
+        <TextBox x:Name="textBox"   HorizontalAlignment="Left" Height="23" Margin="216,147,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_Copy"  HorizontalAlignment="Left" Height="23" Margin="216,205,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_Copy1" HorizontalAlignment="Left" Height="23" Margin="216,262,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+
+        <Label x:Name="label3_Copy" Content="" HorizontalAlignment="Left" Margin="333,202,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.053,-0.115"/>
+        <Label x:Name="label3_Copy1" Content="л." HorizontalAlignment="Left" Margin="343,205,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.053,-0.115"/>
+        <Label x:Name="label3_Copy2" Content="л." HorizontalAlignment="Left" Margin="343,144,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.053,-0.115"/>
+        <Label x:Name="label3_Copy3" Content="л." HorizontalAlignment="Left" Margin="343,259,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.053,-0.115"/>
+        <Grid Name="space" Visibility="Hidden">
+            <Label x:Name="label_Copy2" Content="Burgers" HorizontalAlignment="Left" Margin="90,354,0,0" VerticalAlignment="Top" Foreground="#FF3FE61A" FontFamily="Showcard Gothic" Width="71" Height="23"/>
+            <Label x:Name="label_Copy3" Content="Beverages" HorizontalAlignment="Left" Margin="247,354,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.535,1.859" Foreground="#FFA062DE" FontFamily="Showcard Gothic" Height="23"/>
+            <Label x:Name="label_Copy4" Content="Chocolates" HorizontalAlignment="Left" Margin="390,354,0,0" VerticalAlignment="Top" Foreground="#FFE45513" FontFamily="Showcard Gothic" Height="23"/>
+            <CheckBox x:Name="checkBox" Content="Hamburger 120 тг" HorizontalAlignment="Left" Margin="90,391,0,0" VerticalAlignment="Top" FontFamily="Kristen ITC" Foreground="#FFD86E6E" Height="14"/>
+            <CheckBox x:Name="checkBox_Copy" Content="Cheeseburger 150 тг" HorizontalAlignment="Left" Margin="90,420,0,0" VerticalAlignment="Top" FontFamily="Kristen ITC" Foreground="#FFD86E6E" Height="14"/>
+            <CheckBox x:Name="checkBox_Copy1" Content="Hot-Dog 120 тг" HorizontalAlignment="Left" Margin="90,447,0,0" VerticalAlignment="Top" FontFamily="Kristen ITC" Foreground="#FFD86E6E" Height="14"/>
+            <CheckBox x:Name="checkBox_Copy3" Content="Coca-Cola 150 тг" HorizontalAlignment="Left" Margin="247,394,0,0" VerticalAlignment="Top" FontFamily="Kristen ITC" Foreground="#FFD86E6E" Height="15"/>
+            <CheckBox x:Name="checkBox_Copy4" Content="Fanta 130 тг" HorizontalAlignment="Left" Margin="247,423,0,0" VerticalAlignment="Top" FontFamily="Kristen ITC" Foreground="#FFD86E6E" Height="14"/>
+            <CheckBox x:Name="checkBox_Copy5" Content="Sprite 120 тг" HorizontalAlignment="Left" Margin="247,450,0,0" VerticalAlignment="Top" FontFamily="Kristen ITC" Foreground="#FFD86E6E" Height="13"/>
+            <CheckBox x:Name="checkBox_Copy7" Content="Snickers 180 тг" HorizontalAlignment="Left" Margin="389,391,0,0" VerticalAlignment="Top" FontFamily="Kristen ITC" Foreground="#FFD86E6E" Height="14"/>
+            <CheckBox x:Name="checkBox_Copy8" Content="Mars 150 тг" HorizontalAlignment="Left" Margin="388,423,0,0" VerticalAlignment="Top" FontFamily="Kristen ITC" Foreground="#FFD86E6E" Height="14"/>
+            <CheckBox x:Name="checkBox_Copy9" Content="Alpen-Gold 300 тг" HorizontalAlignment="Left" Margin="388,450,0,0" VerticalAlignment="Top" FontFamily="Kristen ITC" Foreground="#FFD86E6E" Height="13"/>
+
+        </Grid>
+        <Button Content="Shop" HorizontalAlignment="Left" Margin="20,307,0,0" VerticalAlignment="Top" Width="514" Click="Button_Click_1" Height="29" BorderBrush="#FFC72E2E" Foreground="#FF362D2D" Background="#FFA28D8D" FontFamily="Showcard Gothic" FontSize="18">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Grid Name="shogun" Margin="0,-150,0,0">
+            <Grid.Effect>
+                <DropShadowEffect/>
+            </Grid.Effect>
+            <Button x:Name="button" Content="Новый заказ" HorizontalAlignment="Left" Margin="243,595,0,0" VerticalAlignment="Top" Width="75" Click="button_Click" Background="#FFEEB82A">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+
+            <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" TextAlignment="Right" Margin="327,556,0,0" TextWrapping="Wrap" Text="{Binding Source={StaticResource TotalSum}, Path=Summa}" VerticalAlignment="Top" Width="54" Height="23"/>
+            <Label x:Name="label2" Content="Общая Сумма" HorizontalAlignment="Left" Margin="170,551,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.079,0.038" Width="93"/>
+            <Button x:Name="button1" Content="Превью" HorizontalAlignment="Left" Margin="170,512,0,0" VerticalAlignment="Top" Width="211" Background="#FF9DB671" Click="button1_Click">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>
